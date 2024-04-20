@@ -4,6 +4,7 @@ export interface ICommentsDTO {
 }
 
 export interface IDisciplineDTO {
+    id: string,
     nome: string,
     detalhes: string,
     comentarios: ICommentsDTO[],

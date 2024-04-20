@@ -10,7 +10,7 @@ import {
 import { useState } from "react";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../firebase";
-import React from "react";
+import { useRef } from "react";
 import { analyseComment } from "../services/CommentsService";
 
 type addCommentProps = {
@@ -19,12 +19,11 @@ type addCommentProps = {
 
 export function AddComment({ disciplinaId }: addCommentProps) {
   const [commentData, setCommentData] = useState("");
-  const [comentarios, setComentarios] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   let dateString = "";
   const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const cancelRef = React.useRef()
+  const cancelRef = useRef<HTMLButtonElement>(null);
 
   const addCommentToFirestore = async () => {
     try {
@@ -39,7 +38,6 @@ export function AddComment({ disciplinaId }: addCommentProps) {
         }
       ];
       await updateDoc(docRef, { comentarios: updatedComentarios });
-      setComentarios(updatedComentarios);
     } catch (error) {
       toast({
         title: 'Banco de Dados indisponível',
