@@ -22,7 +22,7 @@ const Details = () => {
     let detalhes = "";
     let dbId = "";
     const { currentUser } = useContext(AuthContext);
-    const { id } = useParams();
+    const { id = '' } = useParams<{ id?: string }>();
     const cIndex = parseInt(id, 10);
     const toast = useToast();
 
@@ -57,13 +57,14 @@ const Details = () => {
                 let data: any = await getDisciplines();
                 setDisciplines(data);
                 setLoading(false);
+                console.log("nao paraaaa")
             } catch (error) {
                 console.error('Erro ao buscar as disciplinas:', error);
                 setLoading(false);
             }
         }
         fetchData();
-    }, [disciplines]);
+    }, []);
 
 
     const handleNome = () => {

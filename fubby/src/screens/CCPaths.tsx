@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, Card, CardBody, CardFooter, CardHeader, Container, HStack, Heading, Link, ListItem, SimpleGrid, Spacer, Stack, Text, UnorderedList, VStack, Wrap, WrapItem } from '@chakra-ui/react';
+import { Box, Button, Card, CardBody, CardFooter, CardHeader, Container, HStack, Heading, Link, SimpleGrid, Stack, Text, VStack, Wrap, WrapItem } from '@chakra-ui/react';
 import { Header } from '../components/Header';
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import { Footer } from '../components/Footer';

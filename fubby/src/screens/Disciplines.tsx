@@ -38,6 +38,7 @@ const Disciplines = () => {
                 let data: any = await getDisciplines();
                 setDisciplines(data);
                 setLoading(false);
+                console.log('testeeeee')
             } catch (error) {
                 toast({
                     title: 'Banco de Dados indisponível',
