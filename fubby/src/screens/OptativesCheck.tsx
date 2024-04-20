@@ -4,6 +4,7 @@ import { FileArrowUp } from "@phosphor-icons/react";
 import { useEffect, useRef, useState } from "react";
 import { Document, pdfjs } from 'react-pdf';
 import { Footer } from "../components/Footer";
+import { TextItem } from "pdfjs-dist/types/src/display/api";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const OptativesCheck = () => {
@@ -102,7 +103,15 @@ const OptativesCheck = () => {
             const doc = await pdfjs.getDocument(fileDataUrl).promise;
             const page = await doc.getPage(pageNumber);
             const pageTextItems = await page.getTextContent();
-            return pageTextItems.items.map(item => item.str).join('\n');
+            // return pageTextItems.items.map(item => item.str).join('\n');
+
+            const text = pageTextItems.items
+            .filter((item): item is TextItem => 'str' in item) // Filtragem segura
+            .map((item) => item.str)
+            .join('\n'); // Juntar em uma string separada por novas linhas
+      
+          return text; // Retornar o texto concatenado
+
         } catch (error) {
             throw new Error(`Erro ao extrair texto da página ${pageNumber}: ${error}`);
         }

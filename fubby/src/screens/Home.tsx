@@ -1,4 +1,4 @@
-import { Image, VStack, Container, Box } from '@chakra-ui/react'
+import { Image, VStack, Box } from '@chakra-ui/react'
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
