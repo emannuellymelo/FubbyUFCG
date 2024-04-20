@@ -3,7 +3,7 @@ import { Header } from "../components/Header";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../components/Footer";
 
-const AreaDoAluno = () => {
+const StudentSpace = () => {
     const navigate = useNavigate();
 
     const handleCheckOptatives = () => {
@@ -16,13 +16,13 @@ const AreaDoAluno = () => {
 
     return (
         <Box>
-            <Box justifyContent={'center'} textAlign={'center'} h ={'90vh'}>
-                <Header />
-                <Heading fontFamily={'Poppins'} mt={'2rem'}>Olá, aluno!</Heading>
+            <Header />
+            <Box justifyContent={'center'} textAlign={'center'} h ={'100vh'} bg={'#EFECFF'}>
+                <Heading fontFamily={'Poppins'} pt={'2rem'}>Olá, aluno!</Heading>
                 <Container fontFamily={'Poppins'} fontSize={'xl'} pt={'2rem'}>Aqui você poderá interagir comigo e se planejar para suas disciplinas optativas e, também, para efetuar suas horas complementares.</Container>
                 <HStack justifyContent={'center'} spacing={'7rem'} alignContent={'center'} height={'12rem'}>
-                    <Button _hover={{ boxShadow: 'md', bg: '#FCE4D8', borderRadius: '4' }} fontFamily={'Maven Pro'} onClick={handleCheckOptatives}>Análise de Optativas</Button>
-                    <Button _hover={{ boxShadow: 'md', bg: '#FCE4D8', borderRadius: '4' }} fontFamily={'Maven Pro'} onClick={handleComplementaryHours}>Horas Complementares</Button>
+                    <Button bg={'#D0C6FF'} _hover={{ boxShadow: 'md', bg: '#9F8BFF', borderRadius: '4' }} fontFamily={'Maven Pro'} onClick={handleCheckOptatives}>Análise de Optativas</Button>
+                    <Button bg={'#D0C6FF'} _hover={{ boxShadow: 'md', bg: '#9F8BFF', borderRadius: '4' }} fontFamily={'Maven Pro'} onClick={handleComplementaryHours}>Horas Complementares</Button>
                 </HStack>
             </Box>
             <Footer />
@@ -30,4 +30,4 @@ const AreaDoAluno = () => {
     );
 }
 
-export default AreaDoAluno;
+export default StudentSpace;

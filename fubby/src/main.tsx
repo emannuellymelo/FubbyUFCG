@@ -2,28 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { ChakraProvider } from '@chakra-ui/react'
 import App from './App.tsx'
-import './index.css'
-import theme from './styles/theme.ts'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import Home from './router/Home.tsx'
-import CCPaths from './router/CCPaths.tsx'
-import Disciplines from './router/Disciplines.tsx'
-import Login from './router/Login.tsx'
-import Details from './router/Details.tsx'
-import AreaDoAluno from './router/AreaDoAluno.tsx'
-import OptativesCheck from './router/OptativesCheck.tsx'
-import ComplementaryHours from './router/ComplementaryHours.tsx'
-
-// const router = createBrowserRouter([
-//   {
-//     path: '/',
-//     element: <Home/>
-//   },
-//   {
-//     path:'/Trilhas',
-//     element: <CCPaths/>
-//   }
-// ]);
+import Home from './screens/Home.tsx'
+import CCPaths from './screens/CCPaths.tsx'
+import Disciplines from './screens/Disciplines.tsx'
+import Login from './screens/Login.tsx'
+import Details from './screens/Details.tsx'
+import StudentSpace from './screens/StudentSpace.tsx'
+import OptativesCheck from './screens/OptativesCheck.tsx'
+import ComplementaryHours from './screens/ComplementaryHours.tsx'
 
 const router = createBrowserRouter([
   {
@@ -52,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/area-do-aluno',
-        element: <AreaDoAluno/>
+        element: <StudentSpace/>
       },
       {
         path:'/area-do-aluno/analise-optativas',
@@ -69,7 +56,7 @@ const router = createBrowserRouter([
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
+    <ChakraProvider>
       <RouterProvider router={router} />
     </ChakraProvider>
   </React.StrictMode>,

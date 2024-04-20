@@ -14,32 +14,27 @@ export default function Computation({ category }: CalculatorProps) {
     const handleChangeMonth = (valueAsString: string, valueAsNumber: number) => {
         const value = Math.floor(valueAsNumber)
         setMonths(value);
-        console.log(months)
     }
 
     const handleChangeHours = (valueAsString: string, valueAsNumber: number) => {
         const value = Math.floor(valueAsNumber)
         setHours(value);
-        console.log(hours)
     }
 
     const handleMonthInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const value = event.target.value;
         setMonths(parseInt(value))
-        console.log("Entrou aki meses: " + months)
     }
 
 
     const handleHourInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const value = event.target.value;
         setHours(parseInt(value))
-        console.log("Entrou aki horas: " + hours)
     }
 
     const handleCategory1 = () => {
         if (months >= 12 && months < 24) {
             setResult(10);
-            console.log("resultado " + result)
         } else if (months >= 24) {
             setResult(18);
         } else {
@@ -50,7 +45,7 @@ export default function Computation({ category }: CalculatorProps) {
     const handleCategory2 = () => {
         let calc = 0;
         if (hours == 10 || hours == 20) {
-            calc = (months / 3) * (hours / 10);
+            calc = Math.floor(months / 3) * Math.floor(hours / 10);
             if (calc > 16) {
                 calc = 16;
             }
@@ -60,7 +55,7 @@ export default function Computation({ category }: CalculatorProps) {
     const handleCategory3 = () => {
         let calc = 0;
         if (months >= 6) {
-            calc = (months / 6) * 4;
+            calc = Math.floor(months / 6) * 4;
             if (calc > 16) {
                 calc = 16;
             }
@@ -74,7 +69,7 @@ export default function Computation({ category }: CalculatorProps) {
         const weeks = 4;
         const totalHours = hours * weeks * months;
         if (totalHours >= minimum) {
-            calc = totalHours / 60;
+            calc = Math.floor(totalHours / 60);
             if (calc > 18) {
                 calc = 18;
             }
@@ -86,35 +81,35 @@ export default function Computation({ category }: CalculatorProps) {
         let calc = 0;
         const minimum = 15;
         if (hours >= minimum) {
-            calc = hours / minimum;
+            calc = Math.floor(hours / minimum);
             if (calc > 16) {
                 calc = 16;
             }
         }
-        setResult(Math.floor(calc));
+        setResult(calc);
     }
 
     const handleCategory6 = () => {
         let calc = 0;
         const minimum = 30;
         if (hours >= minimum) {
-            calc = hours / minimum;
+            calc = Math.floor(hours / minimum);
             if (calc > 8) {
                 calc = 8;
             }
         }
-        setResult(Math.floor(calc));
+        setResult(calc);
     }
 
     const handleCategory7 = () => {
         let calc = 0;
         if (months >= 6) {
-            calc = (months / 6) * 2;
+            calc = Math.floor(months / 6) * 2;
             if (calc > 8) {
                 calc = 8;
             }
         }
-        setResult(Math.floor(calc))
+        setResult(calc)
     }
 
     const handleCalculate = () => {
@@ -141,7 +136,6 @@ export default function Computation({ category }: CalculatorProps) {
                 handleCategory7();
                 break;
             default:
-                console.log("Valor não encontrado");
                 toast({
                     title: 'Erro ao calcular',
                     description: "Selecione uma atividade e preencha os campos em branco.",
