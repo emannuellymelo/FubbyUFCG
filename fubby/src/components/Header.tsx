@@ -20,24 +20,24 @@ export function Header({isHome}:headerProps) {
         return navigate('/');
     }
     return (
-        <Flex align={'center'} bg={'#7DA6F2'}>
-            <Image onClick={handleHome} w='10%' src='/fubby-octopus.png' cursor={'pointer'}/>
+        <Flex align={'center'} bg={'#0D0149'} h={'8rem'}>
+            <Image onClick={handleHome} w='9%' src='/fubby-octopus.png' cursor={'pointer'}/>
             {isHome? '': 
-            <Heading onClick={handleHome} cursor={'pointer'} color={'white'} fontFamily={'Maven Pro'}>Fubby</Heading> 
+            <Heading onClick={handleHome} cursor={'pointer'} color={'#EFECFF'} fontFamily={'Maven Pro'} fontWeight={'600'} >Fubby</Heading> 
             }
             <Spacer/>
             <Flex pr={'4rem'} fontFamily={'Maven Pro'}>
                 <Breadcrumb spacing={'2rem'} separator={''} fontSize={'xl'}>
                     <BreadcrumbItem>
-                        <BreadcrumbLink color={'white'} textDecoration="none" _hover={{ boxShadow:'md', bg: 'blue.200', borderRadius:'4' }} onClick={handleCCPaths}>Trilhas em Computação</BreadcrumbLink>
+                        <BreadcrumbLink color={'#EFECFF'} textDecoration="none" _hover={{ boxShadow:'md', borderRadius:'4' }} onClick={handleCCPaths}>Trilhas em Computação</BreadcrumbLink>
                     </BreadcrumbItem>
 
                     <BreadcrumbItem>
-                        <BreadcrumbLink color={'white'} textDecoration="none" _hover={{ boxShadow:'md', bg: 'blue.200', borderRadius:'4' }} onClick={handleDisciplines}>Disciplinas</BreadcrumbLink>
+                        <BreadcrumbLink color={'#EFECFF'} textDecoration="none" _hover={{ boxShadow:'md', borderRadius:'4' }} onClick={handleDisciplines}>Disciplinas</BreadcrumbLink>
                     </BreadcrumbItem>
 
                     <BreadcrumbItem>
-                        <BreadcrumbLink color={'white'} textDecoration="none" _hover={{ boxShadow:'md', bg: 'blue.200', borderRadius:'4' }} onClick={handleStudentSpace}>Área do Aluno</BreadcrumbLink>
+                        <BreadcrumbLink color={'#EFECFF'} textDecoration="none" _hover={{ boxShadow:'md', borderRadius:'4' }} onClick={handleStudentSpace}>Área do Aluno</BreadcrumbLink>
                     </BreadcrumbItem>
                 </Breadcrumb>
             </Flex>
