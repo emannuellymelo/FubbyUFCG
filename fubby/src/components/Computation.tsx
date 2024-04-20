@@ -11,12 +11,12 @@ export default function Computation({ category }: CalculatorProps) {
     const [result, setResult] = useState<number>(-1);
     const toast = useToast();
     
-    const handleChangeMonth = (valueAsString: string, valueAsNumber: number) => {
+    const handleChangeMonth = (_valueAsString: string, valueAsNumber: number) => {
         const value = Math.floor(valueAsNumber)
         setMonths(value);
     }
 
-    const handleChangeHours = (valueAsString: string, valueAsNumber: number) => {
+    const handleChangeHours = (_valueAsString: string, valueAsNumber: number) => {
         const value = Math.floor(valueAsNumber)
         setHours(value);
     }

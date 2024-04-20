@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, Input, Text, VStack } from "@chakra-ui/react";
+import { Card, CardBody, Text } from "@chakra-ui/react";
 
 type commentProps = {
     comment: string,
