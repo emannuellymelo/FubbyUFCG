@@ -10,7 +10,7 @@ export function PopOver({ title, description }: popOverProps) {
     return (
         <Popover isLazy>
             <PopoverTrigger>
-                <Button bg={'#EFECFF'}><InfoIcon color={'gray.400'} boxSize={5}/></Button>
+                <Button bg={'#EFECFF'} size={'md'}><InfoIcon color={'gray.400'} boxSize={4}/></Button>
             </PopoverTrigger>
             <PopoverContent w={'30rem'} bg={'#D0C6FF'}>
                 <PopoverHeader fontWeight='semibold'>{title}</PopoverHeader>

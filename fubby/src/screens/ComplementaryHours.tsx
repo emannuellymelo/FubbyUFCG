@@ -31,7 +31,7 @@ const ComplementaryHours = () => {
                 </HStack>
             </VStack>
 
-            <Flex id={'informacoes'} direction={'column'} fontFamily={'Poppins'} justifyContent={'left'}>
+            <Flex id={'informacoes'} direction={'column'} fontFamily={'Poppins'} justifyContent={'left'} minH={'80vh'}>
                 <Text pl={'5%'} fontSize={'2xl'} fontWeight={'400'} pb={7}>Informações Importantes</Text>
                 <Text pl={'5%'} fontSize={'lg'} fontWeight={'400'} pb={7}>Nesta seção, vou responder algumas das dúvidas mais frequentes entre os alunos, você pode encontrar um conteúdo com mais completude no documento oficial correspondente à <Link color={'blue.500'} href={'https://www.computacao.ufcg.edu.br/graduacao/procedimentos-graduação/aproveitamento-de-atividades-complementares'}>Regulamentação de Atividades Complementares.</Link></Text>
                 <List spacing={3} pl={'7rem'} fontSize={'lg'} pr={'5%'} textAlign={'justify'}>
@@ -66,7 +66,7 @@ const ComplementaryHours = () => {
                     <ListItem>
                         <ListIcon as={Clock} color={'#9F8BFF'} />
                         Um template que exemplifica como as atividades devem ser submetidas pode ser visualizado a seguir:
-                        <Image src={'../src/assets/horas_template.png'} pt={'2rem'} pl={'2rem'} w={'60%'}></Image>
+                        <Image src={'/horas_template.png'} pt={'2rem'} pl={'2rem'} w={'60%'}></Image>
                         <Text pl={'2rem'} pt={'1rem'} fontSize={'lg'}>Obs: o índice presente no tipo de atividade corresponde às categorias especificada na planilha do regulamento mencionado acima</Text>
                     </ListItem>
                 </List>
