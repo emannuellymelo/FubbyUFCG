@@ -2,7 +2,7 @@ import { HStack, Text } from "@chakra-ui/react";
 
 export function Footer() {
     return (
-        <HStack bg={'#7DA6F2'} h={'15vh'} justifyContent={'center'}>
+        <HStack bg={'#9F8BFF'} h={'5vh'} justifyContent={'center'} mt={'auto'}>
             <Text fontFamily={'Maven Pro'} textColor={'white'}>Emannuelly Melo © 2024</Text>
         </HStack>
     )
