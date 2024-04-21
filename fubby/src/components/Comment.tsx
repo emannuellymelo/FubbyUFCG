@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, Input, Text, VStack } from "@chakra-ui/react";
+import { Card, CardBody, Text } from "@chakra-ui/react";
 
 type commentProps = {
     comment: string,
@@ -7,7 +7,7 @@ type commentProps = {
 
 export function Comment({ comment, date }: commentProps) {
     return (
-        <Card w={'45rem'} fontFamily={'Poppins'} mb={10}>
+        <Card fontFamily={'Poppins'} mb={10}>
             <CardBody w={'100%'} bg={'gray.200'} >
                 <Text>{comment}</Text>
                 <Text textAlign={'end'} fontSize={'sm'}>{date}</Text>
