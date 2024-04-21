@@ -14,7 +14,7 @@ const CCPaths = () => {
     return (
         <Box bg={'#EFECFF'}>
             <Header />
-            <VStack h='80vh' justifyContent={'center'} fontFamily={'Poppins'}>
+            <VStack minH='80vh' justifyContent={'center'} fontFamily={'Poppins'}>
                 <Container textAlign={'center'} fontSize={'2xl'} fontWeight={'bold'}>
                     Você sabia que fazer computação pode te levar a várias áreas de atuação diferentes?
                 </Container>
@@ -25,7 +25,7 @@ const CCPaths = () => {
             </VStack>
             <VStack id={'trilhas-spec'} fontFamily={'Poppins'} mb={'4rem'}>
                 <HStack width={'100%'} justifyContent={'center'} pt={'4rem'}>
-                    <SimpleGrid spacing={4} templateColumns='repeat(2, minmax(40%, 1fr))' px='2rem'>
+                    <SimpleGrid spacing={4} templateColumns={{ base: 'repeat(1, minmax(100%, 1fr))', md: 'repeat(2, minmax(40%, 1fr))'}} px='2rem'>
                         <Card bg={'#E5DAC5'} boxShadow={'md'}>
                             <CardHeader>
                                 <Heading size='md'>Ciência de Dados</Heading>

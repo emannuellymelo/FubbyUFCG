@@ -57,7 +57,6 @@ const Details = () => {
                 let data: any = await getDisciplines();
                 setDisciplines(data);
                 setLoading(false);
-                console.log("nao paraaaa")
             } catch (error) {
                 console.error('Erro ao buscar as disciplinas:', error);
                 setLoading(false);
@@ -105,9 +104,9 @@ const Details = () => {
 
             <VStack pt={'2rem'} minH={'80vh'}>
                 {currentUser ?
-                    <Flex direction={'column'}>
-                        <HStack alignItems={'top'}>
-                            <Text fontSize={'2xl'} fontWeight={'400'} justifyContent={'flex-start'} pb={7}>Comentários</Text>
+                    <Flex direction={'column'} w={{base:'100%', md:'50%'}}>
+                        <HStack alignItems={'top'} w={'100%'} textAlign={'left'}>
+                            <Text fontSize={'2xl'} fontWeight={'400'} pb={7}>Comentários</Text>
                             <PopOver title={"Sobre"} description={"Esta seção têm o propósito de proporcionar um ambiente colaborativo entre os alunos, de forma anônima. Espera-se que sejam feitos comentários descritivos e opinativos sobre o conteúdo da cadeira e sobre a metodologia do professor da disciplina. OBS: Para a manutenibilidade desse cenário construtivo e saudável, é utilizado um modelo de machine learning treinado para identificar possíveis comentários tóxicos e evitar a publicação desse conteúdo."} />
                         </HStack>
                         <AddComment disciplinaId={getDBId() ? dbId : "-1"} />

@@ -77,7 +77,7 @@ export function AddComment({ disciplinaId }: addCommentProps) {
       } else {
         toast({
           title: 'Comentário Não Enviado.',
-          description: "Seu comentário foi identificado como não apropriado. Tente fazer um comentário construtivo e, caso já seja, procure refazê-lo usando sinônimos.",
+          description: "Seu comentário foi identificado como não apropriado, tente fazer um comentário construtivo. Caso já seja, procure refazê-lo usando sinônimos.",
           status: 'error',
           duration: 9000,
           isClosable: true,
@@ -106,7 +106,7 @@ export function AddComment({ disciplinaId }: addCommentProps) {
         </HStack>
         :
         <VStack>
-          <Card w={'45rem'} fontFamily={'Poppins'} mb={10}>
+          <Card w={{base:'100%'}} fontFamily={'Poppins'} mb={10}>
             <CardBody w={'100%'} bg={'gray.200'}>
               <Textarea onChange={((ev) => setCommentData(ev.target.value))} placeholder="Seu comentário" />
               <Button onClick={onOpen} colorScheme="blue" mt={1}>Enviar</Button>
