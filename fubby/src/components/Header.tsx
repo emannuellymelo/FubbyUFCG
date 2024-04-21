@@ -36,7 +36,7 @@ export function Header({ isHome }: headerProps) {
                 display={['block', 'block', 'none']} // Exibir apenas em telas pequenas
                 onClick={onOpen}
                 aria-label="Open menu"
-                _hover={'none'}
+                _hover={{}}
             />
 
             <Flex pr={'4rem'} fontFamily={'Maven Pro'} display={['none', 'none', 'block']}>
@@ -61,9 +61,9 @@ export function Header({ isHome }: headerProps) {
                     <DrawerCloseButton color={'white'} />
                     <DrawerBody bg={'#0D0149'}>
                         <VStack align="start" spacing={4} mt={'2rem'}>
-                            <Button bg={'#0D0149'} _hover={'none'}><Text color={'#EFECFF'} textDecoration="none" onClick={handleCCPaths}>Trilhas em Computação</Text></Button>
-                            <Button bg={'#0D0149'} _hover={'none'}><Text color={'#EFECFF'} textDecoration="none" onClick={handleDisciplines}>Disciplinas</Text></Button>
-                            <Button bg={'#0D0149'} _hover={'none'}><Text color={'#EFECFF'} textDecoration="none" onClick={handleStudentSpace}>Área do Aluno</Text></Button>
+                            <Button bg={'#0D0149'} _hover={{}}><Text color={'#EFECFF'} textDecoration="none" onClick={handleCCPaths}>Trilhas em Computação</Text></Button>
+                            <Button bg={'#0D0149'} _hover={{}}><Text color={'#EFECFF'} textDecoration="none" onClick={handleDisciplines}>Disciplinas</Text></Button>
+                            <Button bg={'#0D0149'} _hover={{}}><Text color={'#EFECFF'} textDecoration="none" onClick={handleStudentSpace}>Área do Aluno</Text></Button>
                         </VStack>
                     </DrawerBody>
                 </DrawerContent>
