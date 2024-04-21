@@ -79,7 +79,6 @@ const OptativesCheck = () => {
             setAnalysisResult(results);
             console.log(results);
         }
-
         return results;
     }
 
