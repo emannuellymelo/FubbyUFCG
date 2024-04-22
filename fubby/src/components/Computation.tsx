@@ -189,7 +189,7 @@ export default function Computation({ category }: CalculatorProps) {
             </VStack>
             {result >= 0 ?
                 <VStack>
-                    <Text ml={'4%'} mt={'1rem'}>Você pode aproveitar até {result} créditos</Text>
+                    <Text ml={'4%'} mt={'1rem'}>Você pode aproveitar até {result} crédito(s)</Text>
                 </VStack>
                 : ''
             }
