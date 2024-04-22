@@ -19,7 +19,10 @@ const Disciplines = () => {
     const [isMouseOver, setIsMouseOver] = useState(false);
     const [isIconId, setIconID] = useState<number>(-1);
 
-    const handleCheckDiscipline = (cadeiraId: number) => {
+    let cadeiras: any = [];
+
+    const handleCheckDiscipline = (cadeira: string) => {
+        const cadeiraId = cadeiras.indexOf(cadeira);
         return navigate('/disciplinas/' + cadeiraId.toString());
     }
 
@@ -53,7 +56,6 @@ const Disciplines = () => {
         fetchData();
     }, []);
 
-    let cadeiras: any = [];
     disciplines.forEach((discipline) => {
         cadeiras.push(discipline.nome);
     })
