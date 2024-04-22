@@ -24,7 +24,7 @@ export function Header({ isHome }: headerProps) {
     }
     return (
         <Flex align={'center'} bg={'#0D0149'} h={'8rem'}>
-            <Image w={{base: '20%' , md:'9%'}} onClick={handleHome} w='9%' src='/fubby-octopus.png' cursor={'pointer'} />
+            <Image w={{base: '20%' , md:'9%'}} onClick={handleHome} src='/fubby-octopus.png' cursor={'pointer'} />
             {isHome ? '' :
                 <Heading onClick={handleHome} cursor={'pointer'} color={'#EFECFF'} fontFamily={'Maven Pro'} fontWeight={'600'} >Fubby</Heading>
             }

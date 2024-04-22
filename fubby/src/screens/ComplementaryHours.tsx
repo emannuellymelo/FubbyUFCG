@@ -72,7 +72,7 @@ const ComplementaryHours = () => {
                 </List>
             </Flex>
 
-            <Flex id={'calculadora'} direction={'column'} fontFamily={'Poppins'} justifyContent={'left'} mt={'7rem'} h={'100vh'}>
+            <Flex id={'calculadora'} direction={'column'} fontFamily={'Poppins'} justifyContent={'left'} mt={'7rem'} minH={'100vh'}>
                 <Text pl={'5%'} fontSize={'2xl'} fontWeight={'400'} pb={7}>Calculadora de Créditos</Text>
                 <Text pl={'5%'} fontSize={'lg'} fontWeight={'400'} pb={7}>Já se atrapalhou ao tentar contabilizar suas horas? Posso te ajudar a calcular algumas das principais categorias de atividade complementar. O cálculo será feito de acordo com a <Link color={'blue.500'} href={'https://docs.google.com/spreadsheets/d/18U5sBNFCe9ZIjvsV4wUtSvthkaoCzFxcy10_ylU9PR8/edit?usp=share_link'}>planilha oficial de critérios para aproveitamento.</Link></Text>
                 <Text pl={'5%'} fontSize={'lg'} fontWeight={'400'} pb={7}>Selecione a categoria de atividade:</Text>

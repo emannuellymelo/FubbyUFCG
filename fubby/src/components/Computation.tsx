@@ -151,7 +151,7 @@ export default function Computation({ category }: CalculatorProps) {
             <VStack >
 
                 {category == 'option5' || category == 'option6' ? '' :
-                    <HStack>
+                    <HStack justify={'center'}>
                         <Text> Meses </Text>
                         <NumberInput borderColor={'gray.400'} onChange={handleChangeMonth}>
                             <NumberInputField onChange={handleMonthInputChange} />
@@ -163,8 +163,8 @@ export default function Computation({ category }: CalculatorProps) {
                     </HStack>
                 }
                 {category == 'option5' || category == 'option6' ?
-                    <HStack>
-                        <Text ml={'-5rem'}> Horas Totais </Text>
+                    <HStack justify={'center'}>
+                        <Text ml={{base: 0, sm: '-5rem'}}> Horas Totais </Text>
                         <NumberInput borderColor={'gray.400'} onChange={handleChangeHours}>
                             <NumberInputField onChange={handleHourInputChange} />
                             <NumberInputStepper>
@@ -174,8 +174,8 @@ export default function Computation({ category }: CalculatorProps) {
                         </NumberInput>
                     </HStack>
                     :
-                    <HStack>
-                        <Text ml={'-5rem'}> Horas Semanais </Text>
+                    <HStack justify={'center'}>
+                        <Text ml={{base: 0, sm: '-5rem'}}> Horas Semanais </Text>
                         <NumberInput borderColor={'gray.400'} onChange={handleChangeHours}>
                             <NumberInputField onChange={handleHourInputChange} />
                             <NumberInputStepper>
