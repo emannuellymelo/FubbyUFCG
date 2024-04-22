@@ -92,7 +92,7 @@ const Disciplines = () => {
                     },
                 }}>
                 {cadeirasFiltradas.map((cadeira:string, index:number) => (
-                    <VStack minH={'3rem'} width={'100%'} key={index} onClick={() => handleCheckDiscipline(index)}>
+                    <VStack minH={'3rem'} width={'100%'} key={index} onClick={() => handleCheckDiscipline(cadeira)}>
                         <HStack justifyContent={'space-between'} width={'50%'} cursor={'pointer'} >
                             <Text _hover={{ width: '95%', boxShadow: 'md', bg: '#E5DAC5', borderRadius: '4' }} cursor={'pointer'} >{cadeira}</Text>
                             {isMouseOver && (isIconId == index) ? (
