@@ -82,6 +82,8 @@ const CCPaths = () => {
                                         <WrapItem><Button bg={'#D0C6FF'} color={'#185195'} size={'sm'} onClick={() => handlePath('28')}>Programação Web</Button></WrapItem>
                                         <WrapItem><Button bg={'#D0C6FF'} color={'#185195'} size={'sm'} onClick={() => handlePath('49')}>EDA</Button></WrapItem>
                                         <WrapItem><Button bg={'#D0C6FF'} color={'#185195'} size={'sm'} onClick={() => handlePath('50')}>LEDA</Button></WrapItem>
+                                        <WrapItem><Button bg={'#D0C6FF'} color={'#185195'} size={'sm'} onClick={() => handlePath('59')}>Laboratório de Programação I</Button></WrapItem>
+                                        <WrapItem><Button bg={'#D0C6FF'} color={'#185195'} size={'sm'} onClick={() => handlePath('60')}>Laboratório de Programação II</Button></WrapItem>
                                     </Wrap>
                                 </Stack>
                             </CardFooter>
@@ -141,7 +143,7 @@ const CCPaths = () => {
                                         <WrapItem><Button bg={'#D0C6FF'} color={'#185195'} size={'sm'} onClick={() => handlePath('29')}>Projeto de Software</Button></WrapItem>
                                         <WrapItem><Button bg={'#D0C6FF'} color={'#185195'} size={'sm'} onClick={() => handlePath('37')}>Princípios de Desenvolvimento Web</Button></WrapItem>
                                         <WrapItem><Button bg={'#D0C6FF'} color={'#185195'} size={'sm'} onClick={() => handlePath('30')}>Engenharia de Software</Button></WrapItem>
-                                        <WrapItem><Button bg={'#D0C6FF'} color={'#185195'} size={'sm'} onClick={() => handlePath('60')}>Interface Homem-Máquina</Button></WrapItem>
+                                        <WrapItem><Button bg={'#D0C6FF'} color={'#185195'} size={'sm'} onClick={() => handlePath('63')}>Interface Homem-Máquina</Button></WrapItem>
                                         <WrapItem><Button bg={'#D0C6FF'} color={'#185195'} size={'sm'} onClick={() => handlePath('34')}>Projeto em Computação I</Button></WrapItem>
                                         
                                     </Wrap>
@@ -195,7 +197,7 @@ const CCPaths = () => {
                             <Text fontWeight={'bold'} mb={'2'}>Principais Disciplinas Relacionadas:</Text>
                                 <Stack>
                                     <Wrap spacing={2}>
-                                        <WrapItem><Button bg={'#D0C6FF'} color={'#185195'} size={'sm'} onClick={() => handlePath('60')}>Interface Homem-Máquina</Button></WrapItem>
+                                        <WrapItem><Button bg={'#D0C6FF'} color={'#185195'} size={'sm'} onClick={() => handlePath('63')}>Interface Homem-Máquina</Button></WrapItem>
                                         <WrapItem><Button bg={'#D0C6FF'} color={'#185195'} size={'sm'} onClick={() => handlePath('30')}>Engenharia de Software</Button></WrapItem>
                                     </Wrap>
                                 </Stack>
