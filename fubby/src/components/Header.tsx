@@ -33,7 +33,7 @@ export function Header({ isHome }: headerProps) {
             <IconButton
                 bg={'#0D0149'}
                 icon={<HamburgerIcon color={'white'} />}
-                display={['block', 'block', 'none']} // Exibir apenas em telas pequenas
+                display={['block', 'block', 'none']}
                 onClick={onOpen}
                 aria-label="Open menu"
                 _hover={{}}

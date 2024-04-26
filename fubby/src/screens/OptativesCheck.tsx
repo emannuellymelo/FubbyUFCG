@@ -46,8 +46,7 @@ const OptativesCheck = () => {
                 const optIndex = original.indexOf("Optativas");
                 const necessaryCredits = parseInt(original[optIndex + 8])
                 const optCredits = parseInt(original[optIndex + 10])
-                const result = calculateOptatives(necessaryCredits, optCredits)
-                console.log("aqui o resultado: " + result);
+                calculateOptatives(necessaryCredits, optCredits)
             }
         }
     }
@@ -77,7 +76,6 @@ const OptativesCheck = () => {
             })
         } else {
             setAnalysisResult(results);
-            console.log(results);
         }
         return results;
     }

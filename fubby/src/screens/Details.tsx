@@ -18,13 +18,13 @@ const Details = () => {
     const { dispatch } = useContext(AuthContext)
     const [disciplines, setDisciplines] = useState<IDisciplineDTO[]>([]);
     const [loading, setLoading] = useState(true);
-    let nome = "";
-    let detalhes = "";
-    let dbId = "";
     const { currentUser } = useContext(AuthContext);
     const { id = '' } = useParams<{ id?: string }>();
     const cIndex = parseInt(id, 10);
     const toast = useToast();
+    let nome = "";
+    let detalhes = "";
+    let dbId = "";
 
     const handleLogin = () => {
         signInWithPopup(auth, provider).then((data) => {

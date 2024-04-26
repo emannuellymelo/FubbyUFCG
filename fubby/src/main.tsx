@@ -6,7 +6,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Home from './screens/Home.tsx'
 import CCPaths from './screens/CCPaths.tsx'
 import Disciplines from './screens/Disciplines.tsx'
-import Login from './screens/Login.tsx'
 import Details from './screens/Details.tsx'
 import StudentSpace from './screens/StudentSpace.tsx'
 import OptativesCheck from './screens/OptativesCheck.tsx'
@@ -32,10 +31,6 @@ const router = createBrowserRouter([
       {
         path: '/disciplinas/:id',
         element: <Details />
-      },
-      {
-        path: '/login',
-        element: <Login />
       },
       {
         path:'/area-do-aluno',
