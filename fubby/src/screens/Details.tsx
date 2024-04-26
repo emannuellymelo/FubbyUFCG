@@ -130,7 +130,7 @@ const Details = () => {
 
                     <Button bg={'#D0C6FF'} onClick={handleLogin} mt={10} >
                         <ChatCircleText size={32} />
-                        <Text pl={2}>Entre como seu email @ccc para ter acesso aos comentários</Text>
+                        <Text pl={2}>Entre com seu email @ccc para ter acesso aos comentários</Text>
                     </Button>
                 }
             </VStack>
