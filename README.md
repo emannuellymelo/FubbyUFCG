@@ -20,6 +20,7 @@ As principais tecnologias utilizadas no desenvolvimento do projeto foram:
 - [Typescript](https://www.typescriptlang.org/docs/)
 - [Vite](https://vitejs.dev)
 - [Chakra UI](https://chakra-ui.com/)
+- [Firebase](https://firebase.google.com/docs?hl=pt-br)
 
 ## 🔍 Projeto Associado <a name = "projects"></a>
 
