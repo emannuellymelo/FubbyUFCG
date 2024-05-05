@@ -1,7 +1,7 @@
 import { db } from '../../firebase';
 import { collection, getDocs } from "firebase/firestore";
 
-export async function getDisciplines() {
+export async function getSubjects() {
     try {
         const querySnapshot = await getDocs(collection(db, "disciplinas"));
         let data: any = [];

@@ -3,11 +3,11 @@ export interface ICommentsDTO {
     data: string,
 }
 
-export interface IDisciplineDTO {
+export interface ISubjectDTO {
     id: string,
     nome: string,
     detalhes: string,
     comentarios: ICommentsDTO[],
 }
 
-export type DisciplinesResponse = IDisciplineDTO[];
+export type SubjectsResponse = ISubjectDTO[];

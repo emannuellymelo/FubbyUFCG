@@ -5,7 +5,7 @@ import App from './App.tsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Home from './screens/Home.tsx'
 import CCPaths from './screens/CCPaths.tsx'
-import Disciplines from './screens/Disciplines.tsx'
+import Subjects from './screens/Subjects.tsx'
 import Details from './screens/Details.tsx'
 import StudentSpace from './screens/StudentSpace.tsx'
 import OptativesCheck from './screens/OptativesCheck.tsx'
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/disciplinas',
-        element: <Disciplines />
+        element: <Subjects />
       },
       {
         path: '/disciplinas/:id',

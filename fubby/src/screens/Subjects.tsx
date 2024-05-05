@@ -5,14 +5,14 @@ import { LightbulbFilament } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../components/Footer";
-import { IDisciplineDTO } from "../services/DisciplinesService/types";
-import { getDisciplines } from "../services/DisciplinesService";
+import { ISubjectDTO } from "../services/SubjectsService/types";
+import { getSubjects } from "../services/SubjectsService"
 
-const Disciplines = () => {
+const Subjects = () => {
     const navigate = useNavigate();
     const toast = useToast();
 
-    const [disciplines, setDisciplines] = useState<IDisciplineDTO[]>([]);
+    const [subjects, setSubjects] = useState<ISubjectDTO[]>([]);
     const [loading, setLoading] = useState(true);
 
     const [filterContent, setFilterContent] = useState('');
@@ -21,7 +21,7 @@ const Disciplines = () => {
 
     let cadeiras: any = [];
 
-    const handleCheckDiscipline = (cadeira: string) => {
+    const handleCheckSubject = (cadeira: string) => {
         const cadeiraId = cadeiras.indexOf(cadeira);
         return navigate('/disciplinas/' + cadeiraId.toString());
     }
@@ -38,8 +38,8 @@ const Disciplines = () => {
     useEffect(() => {
         const fetchData = async() => {
             try {
-                let data: any = await getDisciplines();
-                setDisciplines(data);
+                let data: any = await getSubjects();
+                setSubjects(data);
                 setLoading(false);
             } catch (error) {
                 toast({
@@ -56,8 +56,8 @@ const Disciplines = () => {
         fetchData();
     }, []);
 
-    disciplines.forEach((discipline) => {
-        cadeiras.push(discipline.nome);
+    subjects.forEach((subjects) => {
+        cadeiras.push(subjects.nome);
     })
 
     const lowerCaseFilterContent = filterContent.toLowerCase();
@@ -92,7 +92,7 @@ const Disciplines = () => {
                     },
                 }}>
                 {cadeirasFiltradas.map((cadeira:string, index:number) => (
-                    <VStack minH={'3rem'} width={'100%'} key={index} onClick={() => handleCheckDiscipline(cadeira)}>
+                    <VStack minH={'3rem'} width={'100%'} key={index} onClick={() => handleCheckSubject(cadeira)}>
                         <HStack justifyContent={'space-between'} width={'50%'} cursor={'pointer'} >
                             <Text _hover={{ width: '95%', boxShadow: 'md', bg: '#E5DAC5', borderRadius: '4' }} cursor={'pointer'} >{cadeira}</Text>
                             {isMouseOver && (isIconId == index) ? (
@@ -127,4 +127,4 @@ const Disciplines = () => {
     );
 }
 
-export default Disciplines;
+export default Subjects;

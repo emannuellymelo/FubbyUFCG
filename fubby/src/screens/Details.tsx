@@ -9,14 +9,14 @@ import { auth, provider } from "../firebase";
 import { AddComment } from "../components/AddComments";
 import { signInWithPopup } from "firebase/auth";
 import { Footer } from "../components/Footer";
-import { IDisciplineDTO } from "../services/DisciplinesService/types";
-import { getDisciplines } from "../services/DisciplinesService";
+import { ISubjectDTO } from "../services/SubjectsService/types";
+import { getSubjects } from "../services/SubjectsService";
 import { PopOver } from "../components/PopOver";
 import { WarningTwoIcon } from "@chakra-ui/icons";
 
 const Details = () => {
     const { dispatch } = useContext(AuthContext)
-    const [disciplines, setDisciplines] = useState<IDisciplineDTO[]>([]);
+    const [subjects, setSubjects] = useState<ISubjectDTO[]>([]);
     const [loading, setLoading] = useState(true);
     const { currentUser } = useContext(AuthContext);
     const { id = '' } = useParams<{ id?: string }>();
@@ -54,8 +54,8 @@ const Details = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                let data: any = await getDisciplines();
-                setDisciplines(data);
+                let data: any = await getSubjects();
+                setSubjects(data);
                 setLoading(false);
             } catch (error) {
                 console.error('Erro ao buscar as disciplinas:', error);
@@ -67,17 +67,17 @@ const Details = () => {
 
 
     const handleNome = () => {
-        nome = disciplines[cIndex] ? disciplines[cIndex].nome : "";
+        nome = subjects[cIndex] ? subjects[cIndex].nome : "";
         return nome;
     }
 
     const handleDescricao = () => {
-        detalhes = disciplines[cIndex] ? disciplines[cIndex].detalhes : "";
+        detalhes = subjects[cIndex] ? subjects[cIndex].detalhes : "";
         return detalhes;
     }
 
     const getDBId = () => {
-        dbId = disciplines[cIndex] ? disciplines[cIndex].id : "";
+        dbId = subjects[cIndex] ? subjects[cIndex].id : "";
         return dbId;
     }
 
@@ -94,7 +94,7 @@ const Details = () => {
                     <Container textAlign={'justify'} fontSize={'md'} pt={'1rem'} maxW='container.md'>{handleDescricao()}</Container>
                 </VStack>
             }
-            {(disciplines.length == 0 && !loading) ?
+            {(subjects.length == 0 && !loading) ?
                 <VStack fontFamily={'Poppins'} pt={'2rem'} justifyContent={'center'}>
                     <Heading><WarningTwoIcon color={'orange'}/></Heading>
                     <Text>Banco de Dados indisponível!</Text>
@@ -121,7 +121,7 @@ const Details = () => {
                                     backgroundColor: 'gray'
                                 },
                             }}>
-                            {disciplines[cIndex] ? disciplines[cIndex].comentarios.slice().reverse().map((comentario, index) => (
+                            {subjects[cIndex] ? subjects[cIndex].comentarios.slice().reverse().map((comentario, index) => (
                                 <Comment key={index} comment={comentario.comentario} date={comentario.data} />
                             )) : ""}
                         </Box>

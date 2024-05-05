@@ -16,7 +16,7 @@ export function Header({ isHome }: headerProps) {
     const handleStudentSpace = () => {
         return navigate('/area-do-aluno');
     }
-    const handleDisciplines = () => {
+    const handleSubjects = () => {
         return navigate('/disciplinas');
     }
     const handleHome = () => {
@@ -47,7 +47,7 @@ export function Header({ isHome }: headerProps) {
                     </BreadcrumbItem>
 
                     <BreadcrumbItem>
-                        <BreadcrumbLink color={'#EFECFF'} textDecoration="none" _hover={{ boxShadow: 'md', borderRadius: '4' }} onClick={handleDisciplines}>Disciplinas</BreadcrumbLink>
+                        <BreadcrumbLink color={'#EFECFF'} textDecoration="none" _hover={{ boxShadow: 'md', borderRadius: '4' }} onClick={handleSubjects}>Disciplinas</BreadcrumbLink>
                     </BreadcrumbItem>
 
                     <BreadcrumbItem>
@@ -63,7 +63,7 @@ export function Header({ isHome }: headerProps) {
                     <DrawerBody bg={'#0D0149'}>
                         <VStack align="start" spacing={4} mt={'2rem'}>
                             <Button bg={'#0D0149'} _hover={{}}><Text color={'#EFECFF'} textDecoration="none" onClick={handleCCPaths}>Trilhas em Computação</Text></Button>
-                            <Button bg={'#0D0149'} _hover={{}}><Text color={'#EFECFF'} textDecoration="none" onClick={handleDisciplines}>Disciplinas</Text></Button>
+                            <Button bg={'#0D0149'} _hover={{}}><Text color={'#EFECFF'} textDecoration="none" onClick={handleSubjects}>Disciplinas</Text></Button>
                             <Button bg={'#0D0149'} _hover={{}}><Text color={'#EFECFF'} textDecoration="none" onClick={handleStudentSpace}>Área do Aluno</Text></Button>
                         </VStack>
                     </DrawerBody>
